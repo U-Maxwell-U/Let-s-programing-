@@ -1,16 +1,16 @@
-#include<iostream>
-#include<vector>
-#include<algorithm>
 
-using namespace std;
-int a, b, c,;
+#include <iostream>
 
-int main(){
-
-    cin >> a >> b >> c;
-    int syouzyun[3] = {a, b, c};
-    sort(syouzyun, syouzyun + 3);
-    cout << syouzyun[0] << " " << syouzyun[1] << " " << syouzyun[2] << endl;
-
-    return 0;
+int main()
+{
+	int w, h, x, y, r;
+	
+    std::cin >> w >> h >> x >> y >> r;
+	if (r <= x && r <= y && x <= (w - r) && y <= (h - r)) {
+        std::cout << "Yes" << std::endl;
+    }
+	else {
+        std::cout << "No" << std::endl;
+    }
+	return 0;
 }

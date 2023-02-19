@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/itmaxwell/Univercity/resarch/cpp/test/build",
-  "command": "/usr/bin/c++  -isystem /usr/local/include/opencv4  -o CMakeFiles/tes.dir/main.cpp.o -c /home/itmaxwell/Univercity/resarch/cpp/test/main.cpp",
-  "file": "/home/itmaxwell/Univercity/resarch/cpp/test/main.cpp"
-}
-]

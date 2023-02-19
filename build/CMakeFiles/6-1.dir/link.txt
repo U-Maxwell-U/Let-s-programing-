@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/6-1.dir/src/6-1.cpp.o -o 6-1 

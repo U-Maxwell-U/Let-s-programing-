@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/4-2.dir/src/4-2.cpp.o -o 4-2 

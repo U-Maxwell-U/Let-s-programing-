@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/3-2.dir/src/3-2.cpp.o -o 3-2 

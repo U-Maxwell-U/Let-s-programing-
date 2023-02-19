@@ -16,10 +16,11 @@ set(CMAKE_CXX_STANDARD 17)
 file( GLOB APP_SOURCES src/*.cpp )
 foreach( testsourcefile ${APP_SOURCES} )
     # I used a simple string replace, to cut off .cpp.
-    string( REPLACE ".cpp" "" testname ${testsourcefile} )
+    get_filename_component(testname ${testsourcefile} NAME)
+    string( REPLACE ".cpp" "" testname ${testname} )
     add_executable( ${testname} ${testsourcefile} )
     # Make sure YourLib is linked to each app
-    target_link_libraries( ${testname} YourLib )
+    #target_link_libraries( ${testname} YourLib )
 endforeach( testsourcefile ${APP_SOURCES} )
 
 

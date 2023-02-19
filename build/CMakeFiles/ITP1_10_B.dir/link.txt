@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ITP1_10_B.dir/max/ITP1_10_B.cpp.o -o ITP1_10_B 

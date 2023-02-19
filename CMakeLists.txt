@@ -6,14 +6,16 @@
 # add_executable(a.out main.cpp hello.cpp)
 # 研究室で使っているCMakeLists
 cmake_minimum_required(VERSION 3.22)
-project(src)
+#project(src)
+project(max)
 
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(CMAKE_CXX_STANDARD 17)
 
 
-file( GLOB APP_SOURCES src/*.cpp )
+#file( GLOB APP_SOURCES src/*.cpp )
+file( GLOB APP_SOURCES max/*.cpp )
 foreach( testsourcefile ${APP_SOURCES} )
     # I used a simple string replace, to cut off .cpp.
     get_filename_component(testname ${testsourcefile} NAME)

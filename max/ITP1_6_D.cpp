@@ -3,7 +3,7 @@
 using namespace std;
 
 
-int n, m, o[100][100], p[100], q[100]{0};
+int n, m, o[100][100], p[100], q[100] = {0};
 
 
 int main()

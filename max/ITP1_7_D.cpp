@@ -1,9 +1,28 @@
 #include <iostream>
 
-int main(){
-    int a, b;
-    std::cin >> a >> b;
-    std::cout << int(a/b) << " " << int(a%b)<<" "<< a/b<< std::endl;
+using namespace std;
 
 
+int r, c, p[101][101] = {0};
+
+
+int main()
+{
+
+    cin >> r >> c;
+    
+    for (int i = 0; i < r; i++){
+        for (int j = 0; j < c; j++){
+
+        cin >> p[i][j];
+        cout << "rr" << p[i][j] << " ";
+
+    }
+
+        
+
+    }
+
+
+    return 0;
 }

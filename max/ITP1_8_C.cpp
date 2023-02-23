@@ -1,4 +1,6 @@
 #include <iostream>
+#include <ctype.h>
+#include <stdio.h>
 
 using namespace std;
 
@@ -8,22 +10,30 @@ int main(){
     char ch;
     int abc[26] = {}; //a~z　までが25のアスキーコードとして与えられている
 
-    while (cin >> ch)
+    while (cin >> ch)//最初の入力からEOFまで繰り返す
     {
-        ch = tolower(ch);
 
-        //std::cout << "nani ; " << ch << endl;
 
-        if (isalpha(ch))
+        ch = tolower(ch);//大文字を小文字に変換
+
+        //cout << "nani ; " << ch << endl;
+
+        if (isalpha(ch))//もし英文字が入力されたなら
         {
-            abc[ch - 'a']++;
+            int num = ch - 'a';  // 文字 ch の番号 を格納？？？？？？？？？？
+            abc[num]++;
+            //abc[ch - 'a']++; //a~zまでの文字をカウント
+            //cout << "nani ; " << ch << endl;
+            //cout << ch << " : " << abc[num] << endl;
         }
         
         
     }
-    for (int i = 0; i < 26; i++)
+    for (int i = 0; i < 26; i++)//25回分出力する
         {
-            std::cout << ch << " : " << abc[i] << std::endl;
+            ch = 'a' + i; //こいつなにこれなぁに？？？？？？？？？？？？
+            
+            cout << ch << " : " << abc[i] << endl;
         }
     
 

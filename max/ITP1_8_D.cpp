@@ -1,9 +1,27 @@
 #include <iostream>
+#include <string>
+#include <ctype.h>
+#include <stdio.h>
 
-int main(){
-    int a, b;
-    std::cin >> a >> b;
-    std::cout << int(a/b) << " " << int(a%b)<<" "<< a/b<< std::endl;
+using namespace std;
 
-
+int main()
+{
+    string s, p;
+    
+    cin >> s >> p;
+    
+    s += s;
+    
+    if (s.find(p) != string::npos)
+    {
+        cout << "Yes" << endl;
+    }
+    
+    else
+    {
+        cout << "No" << endl;
+    }
+    
+    return 0;
 }

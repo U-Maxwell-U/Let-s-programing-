@@ -1,9 +1,30 @@
 #include <iostream>
+#include <string>
+
+using namespace std;
+
+
 
 int main(){
-    int a, b;
-    std::cin >> a >> b;
-    std::cout << int(a/b) << " " << int(a%b)<<" "<< a/b<< std::endl;
+
+    while (1)
+    {
+        string x;
+        cin >> x;
+        if (x == "0")
+        {
+            break;
+        }
+        int y = 0;
+        for (int i = 0; i < x.size(); i++)
+        {
+            y += x[i] - '0';
+        }
 
 
+        std::cout << y << std::endl;
+        
+    }
+    
+    
 }

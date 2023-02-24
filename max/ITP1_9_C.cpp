@@ -1,9 +1,30 @@
 #include <iostream>
+#include <string>
+#include <ctype.h>
+#include <stdio.h>
 
-int main(){
-    int a, b;
-    std::cin >> a >> b;
-    std::cout << int(a/b) << " " << int(a%b)<<" "<< a/b<< std::endl;
+using namespace std;
 
-
+int main()
+{
+    string tk, hk;
+    int n, tkP = 0, hkP = 0;
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cin >> tk >> hk;
+        if (tk == hk){
+            tkP++, hkP++;
+        }
+            
+        else if (tk > hk){
+            tkP += 3;
+        }
+            
+        else{
+            hkP += 3;
+        }
+            
+    }
+    cout << tkP << " " << hkP << endl;
 }

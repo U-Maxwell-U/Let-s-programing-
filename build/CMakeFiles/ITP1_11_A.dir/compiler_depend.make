@@ -180,8 +180,12 @@ CMakeFiles/ITP1_11_A.dir/max/ITP1_11_A.cpp.o: ../max/ITP1_11_A.cpp \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
-  /usr/include/c++/11/bits/istream.tcc
+  /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/string.h \
+  /usr/include/strings.h
 
+
+/usr/include/string.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 
@@ -518,6 +522,8 @@ CMakeFiles/ITP1_11_A.dir/max/ITP1_11_A.cpp.o: ../max/ITP1_11_A.cpp \
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/strings.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 

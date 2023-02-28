@@ -2,30 +2,62 @@
 #include <string.h>
 #include <stdio.h>
 
-struct st_student
-{
-    char name[32];
-    int age;
-    float weight;
-};
+using namespace std;
 
-struct st_student students[100];
+struct Daisu
+{
+    int q1;
+    int q2;
+    int q3;
+    int q4;
+    int q5;
+    int q6;
+};
 
 int main()
 {
-    strcpy(students[0].name, "John Smith");
-    students[0].age = 25;
-    students[0].weight = 68.5;
+    Daisu d;
+    char me;
 
-    strcpy(students[1].name, "Kate White");
-    students[1].age = 27;
-    students[1].weight = 55.2;
+    cin >> d.q1 >> d.q2 >> d.q3 >> d.q4 >> d.q5 >> d.q6;
 
-    std::cout << "Name:" << students[0].name << '\n';
-    std::cout << "Age:" << students[0].age << '\n';
-    std::cout << "Weight:" << students[0].weight << '\n';
+    while (cin >> me)
+    {
+        if (me == 'N')
+        {
+            int tmp = d.q1;
+            d.q1 = d.q2;
+            d.q2 = d.q6;
+            d.q6 = d.q5;
+            d.q5 = tmp;
+        }
+        else if (me == 'E')
+        {
+            int tmp = d.q1;
+            d.q1 = d.q4;
+            d.q4 = d.q6;
+            d.q6 = d.q3;
+            d.q3 = tmp;
+        }
+        else if (me == 'W')
+        {
+            int tmp = d.q1;
+            d.q1 = d.q3;
+            d.q3 = d.q6;
+            d.q6 = d.q4;
+            d.q4 = tmp;
+        }
+        else if (me == 'S')
+        {
+            int tmp = d.q1;
+            d.q1 = d.q5;
+            d.q5 = d.q6;
+            d.q6 = d.q2;
+            d.q2 = tmp;
+        }
+    }
 
-    std::cout << "Name:" << students[1].name << '\n';
-    std::cout << "Age:" << students[1].age << '\n';
-    std::cout << "Weight:" << students[1].weight << '\n';
+    cout << d.q1 << endl;
+
+    return 0;
 }

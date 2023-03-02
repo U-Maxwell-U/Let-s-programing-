@@ -4,83 +4,81 @@
 
 using namespace std;
 
-struct Daisu
-{
-    int q1;
-    int q2;
-    int q3;
-    int q4;
-    int q5;
-    int q6;
-
-    int q7;
-    int q8;
-    int q9;
-    int q10;
-    int q11;
-    int q12;
-};
-
 int main()
 {
-    Daisu d;
-    int n;
-
+    int me1 = 0, me2 = 0, me3 = 0, me4 = 0;
+    int daisu[101][7];
+    int n = 0, pattern = 0, b = 0;
     cin >> n;
-
-    if (n >= 3)
+    for (int i = 1; i <= n; i++)
     {
-        for (int i = 0; i < n; i++)
+        for (int j = 1; j <= 6; j++)
         {
-            cin >> d.q1 >> d.q2 >> d.q3 >> d.q4 >> d.q5 >> d.q6;
-        }
-
-        for (int i = 0; i < n; i++)
-        {
-            cin >> d.q7 >> d.q8 >> d.q9 >> d.q10 >> d.q11 >> d.q12;
+            cin >> daisu[i][j];
         }
     }
-
+    for (int i = 1; i <= n; i++)
     {
-        cin >> d.q1 >> d.q2 >> d.q3 >> d.q4 >> d.q5 >> d.q6;
-        cin >> d.q7 >> d.q8 >> d.q9 >> d.q10 >> d.q11 >> d.q12;
-    }
-    
-
-    while (!(d.q1 == d.q7 && d.q2 == d.q8))
-    {
-        if (d.q4 == d.q8 || d.q3 == d.q8)
+        for (int j = i + 1; j <= n; j++)
         {
-            int tmp = d.q1;
-            d.q1 = d.q4;
-            d.q4 = d.q6;
-            d.q6 = d.q3;
-            d.q3 = tmp;
-        }
-        while (d.q2 != d.q8)
-        {
-            int tmp = d.q1;
-            d.q1 = d.q2;
-            d.q2 = d.q6;
-            d.q6 = d.q5;
-            d.q5 = tmp;
-        }
-        while (d.q1 != d.q7)
-        {
-            int tmp = d.q1;
-            d.q1 = d.q4;
-            d.q4 = d.q6;
-            d.q6 = d.q3;
-            d.q3 = tmp;
+            for (int k = 0; k < 1000; k++)
+            {
+                pattern = rand() % 4;
+                if (pattern == 0)
+                {
+                    me1 = daisu[i][1];
+                    me2 = daisu[i][3];
+                    me3 = daisu[i][4];
+                    me4 = daisu[i][6];
+                    daisu[i][1] = me3;
+                    daisu[i][3] = me1;
+                    daisu[i][4] = me4;
+                    daisu[i][6] = me2;
+                }
+                else if (pattern == 1)
+                {
+                    me1 = daisu[i][1];
+                    me2 = daisu[i][2];
+                    me3 = daisu[i][5];
+                    me4 = daisu[i][6];
+                    daisu[i][1] = me2;
+                    daisu[i][2] = me4;
+                    daisu[i][5] = me1;
+                    daisu[i][6] = me3;
+                }
+                else if (pattern == 2)
+                {
+                    me1 = daisu[i][1];
+                    me2 = daisu[i][2];
+                    me3 = daisu[i][5];
+                    me4 = daisu[i][6];
+                    daisu[i][1] = me3;
+                    daisu[i][2] = me1;
+                    daisu[i][5] = me4;
+                    daisu[i][6] = me2;
+                }
+                else if (pattern == 3)
+                {
+                    me1 = daisu[i][1];
+                    me2 = daisu[i][3];
+                    me3 = daisu[i][4];
+                    me4 = daisu[i][6];
+                    daisu[i][1] = me2;
+                    daisu[i][3] = me4;
+                    daisu[i][4] = me1;
+                    daisu[i][6] = me3;
+                }
+                for (b = 1; b <= 6; b++)
+                    if (daisu[i][b] != daisu[j][b])
+                        break;
+                if (b == 7)
+                {
+                    cout << "No" << endl;
+                    return 0;
+                }
+            }
         }
     }
-
-    if (d.q3 == d.q9 && d.q4 == d.q10 && d.q5 == d.q11)
-    {
-        cout << "Yes" << endl;
-    }
-    else
-    {
-        cout << "No" << endl;
-    }
+    cout << "Yes" << endl;
+    return 0;
 }
